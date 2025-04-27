@@ -2,9 +2,6 @@ import json
 import sys
 from datetime import datetime
 
-# Для локальной проверки
-sys.stdin = open('input.txt', 'r')
-
 
 def check_capacity(max_capacity: int, guests: list) -> bool:
     events = []
