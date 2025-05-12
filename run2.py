@@ -2,7 +2,6 @@ import sys
 
 import collections
 
-
 # Константы для символов ключей и дверей
 keys_char = [chr(i) for i in range(ord('a'), ord('z') + 1)]
 doors_char = [k.upper() for k in keys_char]
@@ -14,7 +13,22 @@ def get_input():
 
 
 def solve(data):
-    ...
+    """Задаём направление движения"""
+    DIRS = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    n, m = len(data), len(data[0])
+
+    'Найдём старт и все ключи'
+    start = None
+    total_keys = set()
+
+    for i in range(n):
+        for j in range(m):
+            ch = data[i][j]
+            if ch == '@':
+                start = (i, j)
+            elif 'a' <= ch <= 'z':
+                total_keys.add(ch)
+
 
 
 def main():
