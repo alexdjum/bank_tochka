@@ -18,17 +18,16 @@ def solve(data):
     n, m = len(data), len(data[0])
 
     'Найдём старт и все ключи'
-    start = None
+    starts = []
     total_keys = set()
 
     for i in range(n):
         for j in range(m):
-            ch = data[i][j]
-            if ch == '@':
-                start = (i, j)
+            cell = data[i][j]
+            if cell == '@':
+                starts.append((i, j))
             elif 'a' <= ch <= 'z':
-                total_keys.add(ch)
-
+                total_keys.add(cell)
 
 
 def main():
