@@ -26,7 +26,7 @@ def solve(data):
             cell = data[i][j]
             if cell == '@':
                 starts.append((i, j))
-            elif 'a' <= ch <= 'z':
+            elif 'a' <= cell <= 'z':
                 total_keys.add(cell)
 
 
